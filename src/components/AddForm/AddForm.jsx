@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import css from "./AddForm.module.css";
 import { addContact } from "../../app/contacts/operations";
 import { useDispatch, useSelector } from "react-redux";
-import { selectContacts } from "../../app/contacts/selectors";
+import { selectContacts } from "../../app/contacts/contactsSelectors";
 import { useNavigate } from "react-router-dom";
 
 export const AddForm = () => {

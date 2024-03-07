@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import css from "../AddForm/AddForm.module.css";
-import { selectContacts } from "../../app/contacts/selectors";
+import { selectContacts } from "../../app/contacts/contactsSelectors";
 import { useLocation, useNavigate } from "react-router-dom";
 import { updateContact } from "../../app/contacts/operations";
 import { useRef } from "react";
