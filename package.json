@@ -1,6 +1,7 @@
 {
   "name": "phonebook-ts",
   "private": false,
+  "homepage": "https://lyst67.github.io/phonebook-ts/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
