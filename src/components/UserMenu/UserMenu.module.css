@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.menu_btn {
+  font-size: 16px;
+  height: 32px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #aee8ee;
+  box-shadow: -2px 16px 37px -12px #000000bf;
+  cursor: pointer;
+  transition: color 250ms linear, background-color 250ms linear;
+}
+.menu_btn:is(:hover, :focus) {
+  color: #f0ffff;
+  background-color: #5151e6;
+}

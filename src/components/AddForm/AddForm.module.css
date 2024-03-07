@@ -1,0 +1,54 @@
+.addform {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.form_thumb {
+  width: 440px;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0ffff;
+  box-shadow: -2px 16px 37px -12px #000000bf;
+}
+.form_label {
+  font-size: 20px;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.form_input {
+  height: 24px;
+  font-size: 16px;
+}
+.form_btn {
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background-color: #aee8ee;
+  cursor: pointer;
+  transition: color 250ms linear, background-color 250ms linear;
+}
+.form_btn:is(:hover, :focus) {
+  color: #f0ffff;
+  background-color: #5151e6;
+}
+.close_btn {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 50%;
+  background-color: #aee8ee;
+  top: 20px;
+  right: 20px;
+  transition: color 250ms linear, background-color 250ms linear;
+}
+.close_btn:is(:hover, :focus) {
+  color: #f0ffff;
+  background-color: #5151e6;
+}
