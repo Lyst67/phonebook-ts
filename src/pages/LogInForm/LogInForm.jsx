@@ -23,7 +23,12 @@ const LogInForm = () => {
       <form className={css.form_thumb} onSubmit={handleSubmit}>
         <label className={css.form_label}>
           Email
-          <input className={css.form_input} type="email" name="email" />
+          <input
+            className={css.form_input}
+            type="email"
+            name="email"
+            required
+          />
         </label>
         <label className={css.form_label}>
           Password
@@ -32,6 +37,7 @@ const LogInForm = () => {
             type="password"
             name="password"
             autoComplete="off"
+            required
           />
         </label>
         <button type="submit" className={css.form_btn}>

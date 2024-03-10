@@ -28,17 +28,16 @@ const RegisterForm = () => {
       >
         <label className={css.form_label}>
           Name
-          <input
-            className={css.form_input}
-            type="text"
-            name="name"
-            title="Name"
-            required
-          />
+          <input className={css.form_input} type="text" name="name" required />
         </label>
         <label className={css.form_label}>
           Email
-          <input className={css.form_input} type="email" name="email" />
+          <input
+            className={css.form_input}
+            type="email"
+            name="email"
+            required
+          />
         </label>
         <label className={css.form_label}>
           Password
@@ -47,6 +46,7 @@ const RegisterForm = () => {
             type="password"
             name="password"
             autoComplete="off"
+            required
           />
         </label>
         <button type="submit" className={css.form_btn}>
