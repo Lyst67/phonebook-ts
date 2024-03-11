@@ -4,9 +4,9 @@ import { Layout } from "./Layout/Layout";
 import { AddForm } from "./AddForm/AddForm";
 import { refreshThunk } from "../app/auth/auth-operations";
 import { selectIsRefreshing } from "../app/auth/auth-selectors";
-import { Loader } from "./Loader/Loader";
+// import { Loader } from "./Loader/Loader";
 import { UpdateForm } from "./UpdateForm/UpdateForm";
-import { Toaster } from "react-hot-toast";
+// import { Toaster } from "react-hot-toast";
 import { PrivateRoute } from "./PrivatRoute";
 import { PublicRoute } from "./PublicRoute";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
@@ -17,7 +17,7 @@ const LogInForm = lazy(() => import("../pages/LogInForm/LogInForm"));
 const RegisterForm = lazy(() => import("../pages/RegisterForm/RegisterForm"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 
-export const App = () => {
+function App() {
   const isRefreshing = useAppSelector(selectIsRefreshing);
   const dispatch = useAppDispatch();
 
@@ -26,10 +26,9 @@ export const App = () => {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <Loader />
+    <div>Loading...</div>
   ) : (
     <div>
-      <Toaster />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -65,4 +64,6 @@ export const App = () => {
       </Routes>
     </div>
   );
-};
+}
+
+export default App;
