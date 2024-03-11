@@ -4,7 +4,8 @@ import {
   addContact,
   deleteContact,
   updateContact,
-  KnownError,
+  MyKnownError,
+  
 } from "./operations";
 
 export interface Contact {
@@ -16,7 +17,7 @@ export interface Contact {
 export interface ContactState {
   contacts: Contact[];
   isLoading: boolean;
-  error: KnownError | null | undefined;
+  error: MyKnownError | null | undefined;
 }
 
 const initialState = {

@@ -1,17 +1,17 @@
-import { useDispatch, useSelector } from "react-redux";
 import css from "./UserMenu.module.css";
 import { selectUserName } from "../../app/auth/auth-selectors";
 import { logOutThunk } from "../../app/auth/auth-operations";
 import { ImTux } from "react-icons/im";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 export const UserMenu = () => {
-  const userName = useSelector(selectUserName);
-  const dispatch = useDispatch();
+  const userName = useAppSelector(selectUserName);
+  const dispatch = useAppDispatch();
 
   return (
     <div className={css.menu}>
       <p>
-        <ImTux /> Welcome {userName}!
+        <ImTux /> Welcome{`" "${userName}`}!
       </p>
       <button
         className={css.menu_btn}

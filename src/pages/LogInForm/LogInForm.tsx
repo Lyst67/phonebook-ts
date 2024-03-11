@@ -1,13 +1,16 @@
 import { logInThunk } from "../../app/auth/auth-operations";
+import { useAppDispatch } from "../../app/hooks";
 import css from "../RegisterForm/RegisterForm.module.css";
-import { useDispatch } from "react-redux";
 
 const LogInForm = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    const form = evt.currentTarget;
+  const handleSubmit = (event: {
+    preventDefault: () => void;
+    currentTarget: any;
+  }) => {
+    event.preventDefault();
+    const form = event.currentTarget;
     dispatch(
       logInThunk({
         email: form.elements.email.value,

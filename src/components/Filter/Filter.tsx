@@ -1,11 +1,11 @@
-import { useDispatch } from "react-redux";
 import css from "./Filter.module.css";
 import { filterContacts } from "../../app/contacts/filterSlice";
 import { ImSearch } from "react-icons/im";
+import { useAppDispatch } from "../../app/hooks";
 
 export const Filter = () => {
-  const dispatch = useDispatch();
-  const handleFilter = (event) => {
+  const dispatch = useAppDispatch();
+  const handleFilter = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;
     dispatch(filterContacts(value));
   };

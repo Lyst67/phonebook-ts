@@ -1,6 +1,6 @@
 {
   "name": "phonebook-ts",
-  "private": false,
+  "private": true,
   "homepage": "https://lyst67.github.io/phonebook-ts/",
   "version": "0.0.0",
   "type": "module",
@@ -20,7 +20,8 @@
     "react-loader-spinner": "^6.1.6",
     "react-redux": "^9.1.0",
     "react-router-dom": "^6.22.2",
-    "redux-persist": "^6.0.0"
+    "redux-persist": "^6.0.0",
+    "vite-tsconfig-paths": "^4.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
@@ -35,4 +36,5 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.4"
   }
+
 }

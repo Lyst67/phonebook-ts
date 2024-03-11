@@ -1,8 +1,7 @@
-import React, { lazy, useEffect } from "react";
+import { lazy, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
 import { AddForm } from "./AddForm/AddForm";
-import { useDispatch, useSelector } from "react-redux";
 import { refreshThunk } from "../app/auth/auth-operations";
 import { selectIsRefreshing } from "../app/auth/auth-selectors";
 import { Loader } from "./Loader/Loader";
@@ -10,6 +9,7 @@ import { UpdateForm } from "./UpdateForm/UpdateForm";
 import { Toaster } from "react-hot-toast";
 import { PrivateRoute } from "./PrivatRoute";
 import { PublicRoute } from "./PublicRoute";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
 
 const HomePage = lazy(() => import("../pages/Home/Home"));
 const Contacts = lazy(() => import("../pages/Contacts/Contacts"));
@@ -18,8 +18,8 @@ const RegisterForm = lazy(() => import("../pages/RegisterForm/RegisterForm"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 
 export const App = () => {
-  const isRefreshing = useSelector(selectIsRefreshing);
-  const dispatch = useDispatch();
+  const isRefreshing = useAppSelector(selectIsRefreshing);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(refreshThunk());

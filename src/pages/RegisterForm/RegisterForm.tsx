@@ -1,13 +1,16 @@
-import { useDispatch } from "react-redux";
 import css from "./RegisterForm.module.css";
 import { registerThunk } from "../../app/auth/auth-operations";
+import { useAppDispatch } from "../../app/hooks";
 
 const RegisterForm = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    const form = evt.currentTarget;
+  const handleSubmit = (event: {
+    preventDefault: () => void;
+    currentTarget: any;
+  }) => {
+    event.preventDefault();
+    const form = event.currentTarget;
     dispatch(
       registerThunk({
         name: form.elements.name.value,

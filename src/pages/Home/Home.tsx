@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux";
 import css from "./Home.module.css";
 import { selectUserName } from "../../app/auth/auth-selectors";
+import { useAppSelector } from "../../app/hooks";
 
 const HomePage = () => {
-  const userName = useSelector(selectUserName);
+  const userName = useAppSelector(selectUserName);
   return (
     <div className={css.home_page}>
       <h1 className={css.title}>

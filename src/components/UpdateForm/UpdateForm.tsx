@@ -1,12 +1,13 @@
-import { useDispatch, useSelector } from "react-redux";
 import css from "../AddForm/AddForm.module.css";
 import { selectContacts } from "../../app/contacts/contactsSelectors";
 import { useLocation, useNavigate } from "react-router-dom";
 import { updateContact } from "../../app/contacts/operations";
 import { useRef } from "react";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+
 export const UpdateForm = () => {
-  const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
+  const dispatch = useAppDispatch();
+  const contacts = useAppSelector(selectContacts);
   const navigate = useNavigate();
   const goBackRef = useRef("/contacts");
   const { state } = useLocation();
@@ -14,9 +15,12 @@ export const UpdateForm = () => {
   const userNumber = state.number;
   const id = state.id.id;
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault();
-    const form = evt.currentTarget;
+  const handleSubmit = (event: {
+    preventDefault: () => void;
+    currentTarget: any;
+  }) => {
+    event.preventDefault();
+    const form = event.currentTarget;
     const name = form.elements.name.value;
     const number = form.elements.number.value;
     const existName = contacts?.find(

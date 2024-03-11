@@ -1,17 +1,20 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import css from "./AddForm.module.css";
 import { addContact } from "../../app/contacts/operations";
-import { useDispatch, useSelector } from "react-redux";
 import { selectContacts } from "../../app/contacts/contactsSelectors";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 export const AddForm = () => {
   const navigate = useNavigate();
   const goBackRef = useRef("/contacts");
-  const dispatch = useDispatch();
-  const contacts = useSelector(selectContacts);
+  const dispatch = useAppDispatch();
+  const contacts = useAppSelector(selectContacts);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: {
+    preventDefault: () => void;
+    currentTarget: any;
+  }) => {
     event.preventDefault();
     const form = event.currentTarget;
     const name = form.elements.name.value;

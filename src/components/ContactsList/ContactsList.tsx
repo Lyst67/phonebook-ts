@@ -1,4 +1,3 @@
-import { useSelector, useDispatch } from "react-redux";
 import css from "./ContactsList.module.css";
 import {
   selectIsLoading,
@@ -8,29 +7,32 @@ import {
 import { useEffect } from "react";
 import { deleteContact, fetchContacts } from "../../app/contacts/operations";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 export const ContactsList = () => {
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
-  const dispatch = useDispatch();
+  const isLoading = useAppSelector(selectIsLoading);
+  const error = useAppSelector(selectError);
+  const filter = useAppSelector(selectFilteredContacts);
+  const dispatch = useAppDispatch();
   const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
 
-  const deleteElement = (event) => {
-    dispatch(deleteContact(event.target.id));
+  const deleteElement = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    const target = event.currentTarget;
+    dispatch(deleteContact(target.name));
   };
-
-  const filter = useSelector(selectFilteredContacts);
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <div>
       {isLoading && <h1>Loading...</h1>}
-      {error && <h1>{error}</h1>}
+      {error && <h1>An error occured: {error.message}</h1>}
       <ul className={css.cont_list}>
         {filter
           .sort((a, b) => {
@@ -70,7 +72,7 @@ export const ContactsList = () => {
                   <button
                     className={css.cont_btn}
                     type="button"
-                    id={id}
+                    name={id}
                     onClick={deleteElement}
                   >
                     Delete
