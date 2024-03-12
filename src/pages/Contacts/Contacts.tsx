@@ -11,7 +11,6 @@ const Contacts = () => {
           Add Contact
         </Link>
       </button>
-
       <Outlet />
       <h2 className={css.contacts_title}>Your contacts</h2>
       <Filter />

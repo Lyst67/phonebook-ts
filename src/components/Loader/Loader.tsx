@@ -4,7 +4,15 @@ export const Loader = () => {
   return (
     <div className={css.loader_box}>
       <div className={css.loader}>
-        <ThreeCircles strokeWidth="5" animationDuration="0.75" visible={true} />
+        <ThreeCircles
+          visible={true}
+          height="150"
+          width="150"
+          color="#4fa94d"
+          ariaLabel="three-circles-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+        />
       </div>
     </div>
   );

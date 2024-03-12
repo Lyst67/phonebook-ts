@@ -37,6 +37,7 @@ export const registerThunk = createAsyncThunk<UserPayload, Register, {rejectValu
       toast.success("Registration is successful!", { position: "top-right" });
       return data;
     } catch (error) {
+      toast.error("Registration failed.", { position: "top-right" })
       return thunkAPI.rejectWithValue(error as MyErrorType);
     }
   }
@@ -51,6 +52,7 @@ export const logInThunk = createAsyncThunk<UserPayload, Pick<Register, "email" |
       toast.success("Login is successful!", { position: "top-right" });
       return data as UserPayload;
     } catch (error) {
+      toast.error("Login failed.", { position: "top-right" })
       return thunkAPI.rejectWithValue(error as MyErrorType);
     }
   }
@@ -80,7 +82,6 @@ export const logOutThunk = createAsyncThunk<undefined, undefined, {rejectValue: 
     try {
       await axios.post("/users/logout");
       unsetToken();
-      toast.success("Logout is successful!", { position: "top-right" });
     } catch (error) {
       return thunkAPI.rejectWithValue(error as MyErrorType);
     }
