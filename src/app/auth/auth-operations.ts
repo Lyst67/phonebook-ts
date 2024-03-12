@@ -35,7 +35,7 @@ export const registerThunk = createAsyncThunk<UserPayload, Register, {rejectValu
       const { data } = await axios.post("/users/signup", body);
       setToken(data.token);
       toast.success("Registration is successful!", { position: "top-right" });
-      return data as UserPayload;
+      return data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error as MyErrorType);
     }
