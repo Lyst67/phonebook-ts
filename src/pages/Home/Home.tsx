@@ -7,7 +7,7 @@ const HomePage = () => {
   return (
     <div className={css.home_page}>
       <h1 className={css.title}>
-        Hello {userName}!<br />
+        Hello <span className={css.name}>{userName}</span>!<br />
         Welcome to the Phonebook service!
       </h1>
     </div>

@@ -24,14 +24,16 @@ const RegisterForm = () => {
   return (
     <div className={css.contailer}>
       <h1 className={css.title}>Please register!</h1>
-      <form
-        className={css.form_thumb}
-        onSubmit={handleSubmit}
-        autoComplete="on"
-      >
+      <form className={css.form_thumb} onSubmit={handleSubmit}>
         <label className={css.form_label}>
           Name
-          <input className={css.form_input} type="text" name="name" required />
+          <input
+            className={css.form_input}
+            type="text"
+            name="name"
+            placeholder="Jhon Jhonson"
+            required
+          />
         </label>
         <label className={css.form_label}>
           Email
@@ -39,6 +41,7 @@ const RegisterForm = () => {
             className={css.form_input}
             type="email"
             name="email"
+            placeholder="jhonjhonson@mail.com"
             required
           />
         </label>
@@ -49,6 +52,7 @@ const RegisterForm = () => {
             type="password"
             name="password"
             autoComplete="off"
+            placeholder="Must have at least 8 characters"
             required
           />
         </label>

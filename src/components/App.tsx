@@ -15,7 +15,7 @@ const HomePage = lazy(() => import("../pages/Home/Home"));
 const Contacts = lazy(() => import("../pages/Contacts/Contacts"));
 const LogInForm = lazy(() => import("../pages/LogInForm/LogInForm"));
 const RegisterForm = lazy(() => import("../pages/RegisterForm/RegisterForm"));
-const NotFound = lazy(() => import("../pages/Home/NotFound/NotFound"));
+const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 
 function App() {
   const isRefreshing = useAppSelector(selectIsRefreshing);

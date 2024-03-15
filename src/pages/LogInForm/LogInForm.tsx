@@ -30,6 +30,7 @@ const LogInForm = () => {
             className={css.form_input}
             type="email"
             name="email"
+            autoComplete="on"
             required
           />
         </label>

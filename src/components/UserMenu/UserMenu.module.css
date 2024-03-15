@@ -3,17 +3,27 @@
   align-items: center;
   gap: 10px;
 }
+.user_name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.icon_user {
+  width: 20px;
+  height: 20px;
+  color: var(--icon_color, #4169e1);
+}
 .menu_btn {
   font-size: 16px;
   height: 32px;
   padding: 6px 12px;
   border-radius: 6px;
-  background-color: #aee8ee;
-  box-shadow: -2px 16px 37px -12px #000000bf;
+  background-color: var(--btn_bgd, #aee8ee);
+  box-shadow: var(--box_shadow);
   cursor: pointer;
   transition: color 250ms linear, background-color 250ms linear;
 }
 .menu_btn:is(:hover, :focus) {
-  color: #f0ffff;
-  background-color: #5151e6;
+  color: var(--btn_hover_color, #f0ffff);
+  background-color: var(--btn_hover_bgd, #2a27e7);
 }

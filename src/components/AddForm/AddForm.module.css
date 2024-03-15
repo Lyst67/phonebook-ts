@@ -9,8 +9,8 @@
   padding: 20px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #f0ffff;
-  box-shadow: -2px 16px 37px -12px #000000bf;
+  background-color: var(--btn_hover_color, #f0ffff);
+  box-shadow: var(--box_shadow);
 }
 .form_label {
   font-size: 20px;
@@ -28,13 +28,13 @@
   font-size: 16px;
   padding: 6px 12px;
   border-radius: 6px;
-  background-color: #aee8ee;
+  background-color: var(--btn_bgd, #aee8ee);
   cursor: pointer;
   transition: color 250ms linear, background-color 250ms linear;
 }
 .form_btn:is(:hover, :focus) {
-  color: #f0ffff;
-  background-color: #5151e6;
+  color: var(--btn_hover_color, #f0ffff);
+  background-color: var(--btn_hover_bgd, #2a27e7);
 }
 .close_btn {
   position: absolute;
@@ -43,12 +43,12 @@
   font-size: 18px;
   font-weight: 500;
   border-radius: 50%;
-  background-color: #aee8ee;
+  background-color: var(--btn_bgd, #aee8ee);
   top: 20px;
   right: 20px;
   transition: color 250ms linear, background-color 250ms linear;
 }
 .close_btn:is(:hover, :focus) {
-  color: #f0ffff;
-  background-color: #5151e6;
+  color: var(--btn_hover_color, #f0ffff);
+  background-color: var(--btn_hover_bgd, #2a27e7);
 }

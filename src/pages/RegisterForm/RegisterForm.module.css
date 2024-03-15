@@ -1,15 +1,10 @@
 .contailer {
   padding-top: 20px;
   height: 100vh;
-  background: linear-gradient(
-    183deg,
-    rgba(199, 207, 236, 0.06557005126269255) 27%,
-    rgba(87, 87, 147, 0.7238333565848214) 100%
-  );
+  background: var(--container_gradient);
 }
 .title {
   text-align: center;
-  color: #2c2c3b;
 }
 .form_thumb {
   width: 440px;
@@ -18,8 +13,8 @@
   padding: 20px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #f0ffff;
-  box-shadow: -2px 16px 37px -12px #000000bf;
+  background-color: var(--btn_hover_color, #f0ffff);
+  box-shadow: var(--box_shadow);
 }
 .form_label {
   font-size: 20px;
@@ -37,12 +32,12 @@
   font-size: 16px;
   padding: 6px 12px;
   border-radius: 6px;
-  background-color: #aee8ee;
+  background-color: var(--btn_bgd, #aee8ee);
   cursor: pointer;
-  box-shadow: -2px 16px 37px -12px #000000bf;
+  box-shadow: var(--box_shadow);
   transition: color 250ms linear, background-color 250ms linear;
 }
 .form_btn:is(:hover, :focus) {
-  color: #f0ffff;
-  background-color: #5151e6;
+  color: var(--btn_hover_color, #f0ffff);
+  background-color: var(--btn_hover_bgd, #2a27e7);
 }

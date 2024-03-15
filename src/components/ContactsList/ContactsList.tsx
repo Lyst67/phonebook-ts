@@ -8,6 +8,8 @@ import { useEffect } from "react";
 import { deleteContact, fetchContacts } from "../../app/contacts/operations";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { Loader } from "../Loader/Loader";
+import { PiAddressBookLight } from "react-icons/pi";
 
 export const ContactsList = () => {
   const isLoading = useAppSelector(selectIsLoading);
@@ -31,7 +33,7 @@ export const ContactsList = () => {
 
   return (
     <div>
-      {isLoading && <h1>Loading...</h1>}
+      {isLoading && <Loader />}
       {error && <h1>An error occured: {error.message}</h1>}
       <ul className={css.cont_list}>
         {filter
@@ -49,8 +51,8 @@ export const ContactsList = () => {
           .map(({ id, name, number }) => {
             return (
               <li className={css.cont_item} key={id}>
-                <p>
-                  {name}: {number}
+                <p className={css.contact_row}>
+                  <PiAddressBookLight /> {name}: {number}
                 </p>
                 <div className={css.cont_btns}>
                   <button
