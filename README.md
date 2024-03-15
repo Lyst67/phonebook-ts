@@ -1,30 +1,18 @@
-# React + TypeScript + Vite
+React-app «Книга контактів» створений full stack розробником Павло Листопад.
+«Книга контактів» надає можливість реєстрації, логіна та оновлення користувача,
+а також роботу з приватною колекцією контактів.
+Для цього завдання використано готовий бекенд: https://connections-api.herokuapp.com/'.
+Він підтримує всі необхідні операції з колекцією контактів, а також реєстрацію, логін та оновлення
+користувача за допомогою JWT. Додано маршрутизацію з бібліотекою React Router.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+У програмі є кілька сторінок:
 
-Currently, two official plugins are available:
+/register - публічний маршрут реєстрації нового користувача з формою
+/login - публічний маршрут логіна існуючого користувача з формою
+/contacts - приватний маршрут для роботи зі списком контактів користувача.
+Додано компонент навігації.
+Navigation з посиланнями для переходу по маршрутах.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Можеш швидко спробувати з
+email: pollyst@mail.com
+password: qwertyu123
