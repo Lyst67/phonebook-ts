@@ -10,8 +10,9 @@ export const UserMenu = () => {
 
   return (
     <div className={css.menu}>
-      <p className={css.user_name}>
-        <VscAccount className={css.icon_user} /> Welcome {userName}!
+      <p className={css.welcome}>
+        <VscAccount className={css.icon_user} /> Welcome{" "}
+        <span className={css.user_name}>{userName}</span>!
       </p>
       <button
         className={css.menu_btn}

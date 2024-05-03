@@ -1,21 +1,77 @@
 .home_page {
-  display: block;
-  width: 100%;
+  display: flex;
+  gap: 24px;
   height: 100vh;
   padding-top: 64px;
   text-align: center;
-  background-image: var(--img_gradient), url("/img_phone.jpeg");
+  background: var(--mauve);
+  padding: 20px;
+}
+.welcome_part {
+  width: 50%;
+  height: 90%;
+  border-radius: 16px;
+  background-image: var(--container_gradient), url("/public/image_bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
+.slogan {
+  font-size: 28px;
+  color: var(--main_text_color, #c0d0e1);
+}
+.img_part {
+  width: 50%;
+  height: 90%;
+  border-radius: 16px;
+  background-image: url("/public/21.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .title {
-  font-size: 42px;
-  color: var(--bgd_color, #c0d0e1);
-  font-family: "Roboto", sans-serif;
+  margin: 20px 0;
+  font-size: 64px;
+  color: var(--main_text_color, #c0d0e1);
+  opacity: 0.9;
+  background: linear-gradient(
+    89deg,
+    #d9edf2 39.86%,
+    #6633d3 76.63%,
+    #6400ac 104.63%
+  );
+  background-clip: text;
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -2px;
 }
 .name {
-  color: var(--btn_hover_bgd, #2a27e7);
-  text-shadow: var(--text_shadow, #00f2ff) 1px 0 10px;
+  font-style: italic;
+  -webkit-text-fill-color: #4d06d0;
+  text-shadow: var(--textshadow, black) 3px 3px 4px;
+}
+.go_btn {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  justify-items: center;
+  padding: 12px 20px;
+  margin-top: 40px;
+  font-size: 24px;
+  text-decoration: none;
+  border: solid 2px;
+  border-radius: 8px;
+  border-color: var(--main_text_color, #c0d0e1);
+  color: var(--main_text_color, #c0d0e1);
+  background-color: transparent;
+  transition: background-color 300ms linear;
+}
+.go_btn:is(:hover, :focus) {
+  background-color: var(--btn_hover_bgd1, #1a65ef);
+}
+.arrow_img {
+  width: 14px;
 }

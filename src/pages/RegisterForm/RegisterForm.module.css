@@ -13,7 +13,10 @@
   padding: 20px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: var(--btn_hover_color, #f0ffff);
+  background-image: var(--container_gradient), url("/public/image_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   box-shadow: var(--box_shadow);
 }
 .form_label {
@@ -25,14 +28,29 @@
   margin-bottom: 20px;
 }
 .form_input {
+  border-radius: 6px;
+  padding: 4px 8px 4px 8px;
   height: 24px;
   font-size: 16px;
+  color: var(--dark_navy, #0a0d17);
+  background-color: var(--input_color, #aaa3bd9d);
+  border: solid 2px;
+  border-color: var(--input_color, #aaa3bd9d);
+  outline: none;
+  transition: border-color 250ms linear;
+}
+.form_input::placeholder {
+  color: var(--dark_navy, #0a0d17);
+  opacity: 0.7;
+}
+.form_input:is(:hover, :focus) {
+  border-color: var(--active_color, #3a98ff);
 }
 .form_btn {
   font-size: 16px;
   padding: 6px 12px;
   border-radius: 6px;
-  background-color: var(--btn_bgd, #aee8ee);
+  background-color: var(--btn_bgd, #9ca2fb);
   cursor: pointer;
   box-shadow: var(--box_shadow);
   transition: color 250ms linear, background-color 250ms linear;

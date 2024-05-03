@@ -13,5 +13,20 @@
 .filter_input {
   width: 320px;
   height: 24px;
-  font-size: 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  padding: 4px 8px 4px 8px;
+  color: var(--dark_navy, #0a0d17);
+  background-color: var(--input_color, #aaa3bd9d);
+  border: solid 2px;
+  border-color: var(--input_color, #aaa3bd9d);
+  outline: none;
+  transition: border-color 250ms linear;
+}
+.filter_input::placeholder {
+  color: var(--dark_navy, #0a0d17);
+  opacity: 0.7;
+}
+.filter_input:is(:hover, :focus) {
+  border-color: var(--active_color, #3a98ff);
 }

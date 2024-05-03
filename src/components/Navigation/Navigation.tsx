@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import css from "./Navigation.module.css";
 import { selectIsLogedIn } from "../../app/auth/auth-selectors";
 import { useAppSelector } from "../../app/hooks";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/paper_notes.svg";
 
 export const Navigation = () => {
   const isLogedIn = useAppSelector(selectIsLogedIn);

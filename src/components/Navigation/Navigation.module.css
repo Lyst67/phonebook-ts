@@ -3,14 +3,17 @@
   align-items: center;
   gap: 20px;
 }
+.logo_box {
+  object-position: center;
+}
 .logo {
+  display: block;
   width: 32px;
   height: 32px;
-  object-fit: contain;
 }
 .link {
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;
-  color: var(--text_color, #2c2c3b);
+  color: var(--main_text_color) #c0d0e1;
 }

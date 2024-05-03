@@ -48,6 +48,7 @@ export const AddForm = () => {
             name="name"
             pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title="Name"
+            placeholder="Enter name"
             required
           />
         </label>
@@ -59,6 +60,7 @@ export const AddForm = () => {
             name="number"
             pattern="\+?\d{1,4}?[ .\-\s]?\(?\d{1,3}?\)?[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,4}[ .\-\s]?\d{1,9}"
             title="Phone number"
+            placeholder="Enter number"
             required
           />
         </label>

@@ -2,8 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 44px;
   padding: 0 20px;
+  opacity: 1;
   border-bottom: 1px solid var(--border_color);
-  background-color: var(--header_bgd);
 }

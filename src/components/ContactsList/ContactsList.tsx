@@ -29,8 +29,6 @@ export const ContactsList = () => {
     dispatch(deleteContact(target.name));
   };
 
-  window.scrollTo({ top: 0, behavior: "smooth" });
-
   return (
     <div>
       {isLoading && <Loader />}
