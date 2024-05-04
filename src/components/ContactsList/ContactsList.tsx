@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { Loader } from "../Loader/Loader";
 import { PiAddressBookLight } from "react-icons/pi";
+import Button from "../Button/Button";
 
 export const ContactsList = () => {
   const isLoading = useAppSelector(selectIsLoading);
@@ -49,13 +50,16 @@ export const ContactsList = () => {
           .map(({ id, name, number }) => {
             return (
               <li className={css.cont_item} key={id}>
-                <p className={css.contact_row}>
-                  <PiAddressBookLight /> {name}: {number}
-                </p>
-                <div className={css.cont_btns}>
-                  <button
+                <div className={css.contact_row}>
+                  <PiAddressBookLight />
+                  <div className={css.contact_data}>
+                    <span>{name}:</span>
+                    <span>{number}</span>
+                  </div>
+                </div>
+                <div className={css.contact_buttons}>
+                  <Button
                     type="button"
-                    className={css.cont_btn}
                     id={id}
                     onClick={() =>
                       navigate("update", {
@@ -68,15 +72,10 @@ export const ContactsList = () => {
                     }
                   >
                     Edit
-                  </button>
-                  <button
-                    className={css.cont_btn}
-                    type="button"
-                    name={id}
-                    onClick={deleteElement}
-                  >
+                  </Button>
+                  <Button type="button" name={id} onClick={deleteElement}>
                     Delete
-                  </button>
+                  </Button>
                 </div>
               </li>
             );

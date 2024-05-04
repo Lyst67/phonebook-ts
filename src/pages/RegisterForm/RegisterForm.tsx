@@ -1,9 +1,15 @@
 import css from "./RegisterForm.module.css";
 import { registerThunk } from "../../app/auth/auth-operations";
 import { useAppDispatch } from "../../app/hooks";
+import Button from "@/components/Button/Button";
+import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import CloseButton from "@/components/CloseButton/CloseButton";
 
 const RegisterForm = () => {
   const dispatch = useAppDispatch();
+  const goBackRef = useRef("/");
+  const navigate = useNavigate();
 
   const handleSubmit = (event: {
     preventDefault: () => void;
@@ -21,10 +27,15 @@ const RegisterForm = () => {
     form.reset();
   };
 
+  const handleBack = () => {
+    navigate(goBackRef.current);
+  };
+
   return (
     <div className={css.contailer}>
       <h1 className={css.title}>Please register!</h1>
       <form className={css.form_thumb} onSubmit={handleSubmit}>
+        <CloseButton onClick={handleBack} />
         <label className={css.form_label}>
           Name
           <input
@@ -56,9 +67,7 @@ const RegisterForm = () => {
             required
           />
         </label>
-        <button type="submit" className={css.form_btn}>
-          Register
-        </button>
+        <Button type="submit">Register</Button>
       </form>
     </div>
   );

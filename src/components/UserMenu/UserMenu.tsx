@@ -3,8 +3,11 @@ import { selectUserName } from "../../app/auth/auth-selectors";
 import { logOutThunk } from "../../app/auth/auth-operations";
 import { VscAccount } from "react-icons/vsc";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import Button from "../Button/Button";
 
-export const UserMenu = () => {
+type UserMenuProps = {};
+
+export const UserMenu = ({}: UserMenuProps) => {
   const userName = useAppSelector(selectUserName);
   const dispatch = useAppDispatch();
 
@@ -14,13 +17,9 @@ export const UserMenu = () => {
         <VscAccount className={css.icon_user} /> Welcome{" "}
         <span className={css.user_name}>{userName}</span>!
       </p>
-      <button
-        className={css.menu_btn}
-        type="button"
-        onClick={() => dispatch(logOutThunk())}
-      >
+      <Button type="button" onClick={() => dispatch(logOutThunk())}>
         Logout
-      </button>
+      </Button>
     </div>
   );
 };

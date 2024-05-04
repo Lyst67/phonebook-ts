@@ -1,5 +1,6 @@
 .home_page {
   display: flex;
+  flex-direction: column;
   gap: 24px;
   height: 100vh;
   padding-top: 64px;
@@ -74,4 +75,23 @@
 }
 .arrow_img {
   width: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .home_page {
+    /* width: 446px; */
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .hero-container {
+    margin-top: 64px;
+    flex-direction: row;
+    gap: 32px;
+    overflow-x: visible;
+  }
 }

@@ -1,12 +1,12 @@
 .contailer {
   padding-top: 20px;
   height: 100vh;
-  background: var(--container_gradient);
 }
 .title {
   text-align: center;
 }
 .form_thumb {
+  position: relative;
   width: 440px;
   height: fit-content;
   margin: 20px auto;
@@ -45,17 +45,4 @@
 }
 .form_input:is(:hover, :focus) {
   border-color: var(--active_color, #3a98ff);
-}
-.form_btn {
-  font-size: 16px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  background-color: var(--btn_bgd, #9ca2fb);
-  cursor: pointer;
-  box-shadow: var(--box_shadow);
-  transition: color 250ms linear, background-color 250ms linear;
-}
-.form_btn:is(:hover, :focus) {
-  color: var(--btn_hover_color, #f0ffff);
-  background-color: var(--btn_hover_bgd, #2a27e7);
 }

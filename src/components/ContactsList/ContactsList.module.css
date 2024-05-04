@@ -15,24 +15,15 @@
 .contact_row {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   color: #d1ddea;
 }
-.cont_btn {
-  height: fit-content;
-  font-size: 16px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  background-color: var(--btn_bgd, #9ca2fb);
-  cursor: pointer;
-  box-shadow: var(--box_shadow);
-  transition: color 250ms linear, background-color 250ms linear;
+.contact_data {
+  display: grid;
+  grid-template-columns: minmax(160px, max-content) 200px;
+  justify-content: space-between;
 }
-.cont_btn:is(:hover, :focus) {
-  color: var(--btn_hover_color, #f0ffff);
-  background-color: var(--btn_hover_bgd, #2a27e7);
-}
-.cont_btns {
+.contact_buttons {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }

@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { updateContact } from "../../app/contacts/operations";
 import { useRef } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import Button from "../Button/Button";
+import CloseButton from "../CloseButton/CloseButton";
 
 export const UpdateForm = () => {
   const dispatch = useAppDispatch();
@@ -40,9 +42,7 @@ export const UpdateForm = () => {
 
   return (
     <div className={css.addform}>
-      <button className={css.close_btn} onClick={handleBack} type="button">
-        X
-      </button>
+      <CloseButton onClick={handleBack} />
       <form className={css.form_thumb} onSubmit={handleSubmit}>
         <label className={css.form_label}>
           Name
@@ -68,9 +68,7 @@ export const UpdateForm = () => {
             defaultValue={userNumber.number}
           />
         </label>
-        <button type="submit" className={css.form_btn}>
-          Update contact
-        </button>
+        <Button type="submit">Update contact</Button>
       </form>
     </div>
   );

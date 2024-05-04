@@ -16,17 +16,3 @@
 .user_name {
   color: var(--active-color, #3a98ff);
 }
-.menu_btn {
-  font-size: 16px;
-  height: 32px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  background-color: var(--btn_bgd, #9ca2fb);
-  box-shadow: var(--box_shadow);
-  cursor: pointer;
-  transition: color 250ms linear, background-color 250ms linear;
-}
-.menu_btn:is(:hover, :focus) {
-  color: var(--btn_hover_color, #f0ffff);
-  background-color: var(--btn_hover_bgd, #2a27e7);
-}

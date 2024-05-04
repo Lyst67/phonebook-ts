@@ -4,6 +4,8 @@ import { addContact } from "../../app/contacts/operations";
 import { selectContacts } from "../../app/contacts/contactsSelectors";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import CloseButton from "../CloseButton/CloseButton";
+import Button from "../Button/Button";
 
 export const AddForm = () => {
   const navigate = useNavigate();
@@ -36,9 +38,7 @@ export const AddForm = () => {
 
   return (
     <div className={css.addform}>
-      <button className={css.close_btn} onClick={handleBack} type="button">
-        X
-      </button>
+      <CloseButton onClick={handleBack} />
       <form className={css.form_thumb} onSubmit={handleSubmit}>
         <label className={css.form_label}>
           Name
@@ -64,9 +64,9 @@ export const AddForm = () => {
             required
           />
         </label>
-        <button type="submit" className={css.form_btn}>
+        <Button type="submit" className={css.form_btn}>
           Add contact
-        </button>
+        </Button>
       </form>
     </div>
   );

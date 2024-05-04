@@ -1,0 +1,25 @@
+.close_button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--btn_bgd, #9ca2fb);
+  transition: background-color 300ms linear;
+}
+.close_button:is(:hover, :focus) {
+  background-color: var(--btn_hover_bgd, #2a27e7);
+}
+.cross {
+  color: var(--dark_navy, #0a0d17);
+  min-width: 24px;
+  height: 24px;
+  transition: color 300ms linear;
+}
+.cross:is(:hover, :focus) {
+  color: var(--btn_hover_color, #f0ffff);
+}
