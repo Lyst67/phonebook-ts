@@ -1,6 +1,6 @@
 .button {
-  font-size: 16px;
-  padding: 6px 12px;
+  font-size: 14px;
+  padding: 4px 8px;
   display: block;
   border-radius: 6px;
   background-color: var(--btn_bgd, #9ca2fb);
@@ -11,4 +11,14 @@
 .button:is(:hover, :focus) {
   color: var(--btn_hover_color, #f0ffff);
   background-color: var(--btn_hover_bgd, #2a27e7);
+}
+
+@media screen and (min-width: 768px) {
+  .button {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
 }

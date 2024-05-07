@@ -1,0 +1,18 @@
+.icon_buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.delete_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.svg_icon {
+  width: 16px;
+  height: 16px;
+  color: #d1ddea;
+}

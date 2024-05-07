@@ -11,7 +11,7 @@
   gap: 16px;
 }
 .filter_input {
-  width: 320px;
+  width: 220px;
   height: 24px;
   font-size: 18px;
   border-radius: 6px;
@@ -29,4 +29,16 @@
 }
 .filter_input:is(:hover, :focus) {
   border-color: var(--active_color, #3a98ff);
+}
+
+@media screen and (min-width: 768px) {
+  .filter_input {
+    width: 280px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .filter_input {
+    width: 320px;
+  }
 }

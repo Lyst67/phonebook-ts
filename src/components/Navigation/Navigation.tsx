@@ -2,20 +2,20 @@ import { NavLink } from "react-router-dom";
 import css from "./Navigation.module.css";
 import { selectIsLogedIn } from "../../app/auth/auth-selectors";
 import { useAppSelector } from "../../app/hooks";
-import logo from "../../assets/paper_notes.svg";
 
-export const Navigation = () => {
+type NavigationProps = {
+  onClose: () => void;
+};
+
+export const Navigation = ({ onClose }: NavigationProps) => {
   const isLogedIn = useAppSelector(selectIsLogedIn);
   return (
     <nav className={css.nav}>
-      <div className={css.logo_box}>
-        <img className={css.logo} src={logo} alt="phonebook" />
-      </div>
-      <NavLink className={css.link} to="/" end>
+      <NavLink className={css.link} to="/" end onClick={onClose}>
         Home
       </NavLink>
       {isLogedIn && (
-        <NavLink className={css.link} to="/contacts">
+        <NavLink className={css.link} to="/contacts" onClick={onClose}>
           Contacts
         </NavLink>
       )}

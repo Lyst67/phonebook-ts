@@ -1,5 +1,6 @@
 .authnav {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 .nav_link {
@@ -7,4 +8,10 @@
   font-weight: 500;
   text-decoration: none;
   color: var(--main_text_color, #c0d0e1);
+}
+
+@media screen and (min-width: 768px) {
+  .authnav {
+    flex-direction: row;
+  }
 }

@@ -1,0 +1,41 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.mobile_menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 320px;
+  height: 100vh;
+  border-radius: 12px;
+  background-image: var(--container_gradient), url("/public/image_bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: var(--box_shadow);
+  transform: translateX(100%);
+  transition: transform 300ms linear;
+}
+.is_open {
+  transform: translate(0);
+}
+.nav_menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 60px 40px;
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    display: none;
+  }
+  .mobile_menu {
+    display: none;
+  }
+}

@@ -7,9 +7,51 @@
   opacity: 1;
   border-bottom: 1px solid var(--border_color);
 }
-@media screen and (min-width: 768px) {
-  /* .header {
-  } */
+.logo_box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
+.logo {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+.nav_buttons {
+  display: none;
+}
+.title {
+  display: none;
+}
+.menu {
+  display: none;
+}
+.burger_button {
+  display: block;
+  width: 28px;
+  height: 28px;
+  color: var(--main_text_color, #c0d0e1);
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 52px;
+  }
+  .nav_buttons {
+    display: block;
+  }
+  .title {
+    display: block;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .burger_button {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1280px) {
 }

@@ -1,8 +1,7 @@
 import css from "./Home.module.css";
 import { selectUserName } from "../../app/auth/auth-selectors";
 import { useAppSelector } from "../../app/hooks";
-import arrowRight from "../../assets/arrow_right.svg";
-import { Link } from "react-router-dom";
+import GoButton from "@/components/GoButton/GoButton";
 
 const HomePage = () => {
   const userName = useAppSelector(selectUserName);
@@ -15,12 +14,7 @@ const HomePage = () => {
           Get in touth!
         </h1>
         <p className={css.slogan}>Let’s connect our constellations</p>
-        {userName && (
-          <Link to="/contacts" className={css.go_btn}>
-            Go to Your Contacts{" "}
-            <img className={css.arrow_img} src={arrowRight} alt="arrow top" />
-          </Link>
-        )}
+        {userName && <GoButton />}
       </div>
       <div className={css.img_part}></div>
     </div>

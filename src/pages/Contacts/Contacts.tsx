@@ -8,10 +8,10 @@ import Button from "@/components/Button/Button";
 const Contacts = () => {
   return (
     <div className={css.contacts_container}>
+      <Outlet />
       <Link className={css.add_link} to="add">
         <Button type="button">Add Contact</Button>
       </Link>
-      <Outlet />
       <h2 className={css.contacts_title}>Your contacts</h2>
       <Filter />
       <ContactsList />

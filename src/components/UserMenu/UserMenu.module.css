@@ -8,11 +8,3 @@
   align-items: center;
   gap: 4px;
 }
-.icon_user {
-  width: 20px;
-  height: 20px;
-  color: var(--icon_color, #4169e1);
-}
-.user_name {
-  color: var(--active-color, #3a98ff);
-}

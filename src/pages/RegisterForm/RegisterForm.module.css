@@ -1,5 +1,5 @@
 .contailer {
-  padding-top: 20px;
+  padding: 20px;
   height: 100vh;
 }
 .title {
@@ -7,7 +7,8 @@
 }
 .form_thumb {
   position: relative;
-  width: 440px;
+  min-width: 260px;
+  max-width: 360px;
   height: fit-content;
   margin: 20px auto;
   padding: 20px;
@@ -20,11 +21,11 @@
   box-shadow: var(--box_shadow);
 }
 .form_label {
-  font-size: 20px;
-  width: 260px;
+  font-size: 16px;
+  width: 240px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 8px;
   margin-bottom: 20px;
 }
 .form_input {
@@ -45,4 +46,15 @@
 }
 .form_input:is(:hover, :focus) {
   border-color: var(--active_color, #3a98ff);
+}
+
+@media screen and (min-width: 768px) {
+  .form_thumb {
+    width: 440px;
+  }
+  .form_label {
+    width: 260px;
+    font-size: 20px;
+    gap: 12px;
+  }
 }

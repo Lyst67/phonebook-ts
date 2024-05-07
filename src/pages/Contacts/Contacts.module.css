@@ -3,9 +3,9 @@
   height: 100vh;
 }
 .contacts_title {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   margin-bottom: 20px;
-  font-size: 32px;
+  font-size: 24px;
   text-align: center;
   color: var(--main_text_color, #c0d0e1);
 }
@@ -16,12 +16,30 @@
 }
 .arrow_up {
   display: block;
-  width: 40px;
-  height: 40px;
-  margin: 32px 32px 32px auto;
+  width: 32px;
+  height: 32px;
+  margin: 24px auto;
   color: var(--main_text_color, #c0d0e1);
   transition: color 300ms linear;
 }
 .arrow_up:is(:hover, :focus) {
   color: #ba44fa;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts_title {
+    font-size: 32px;
+    margin-top: 20px;
+  }
+  .arrow_up {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .arrow_up {
+    width: 40px;
+    height: 40px;
+  }
 }
